@@ -4,7 +4,7 @@ package runners;
 import io.cucumber.junit.CucumberOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
-import net.thucydides.core.util.SystemEnvironmentVariables;
+import net.thucydides.core.environment.SystemEnvironmentVariables;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
@@ -34,7 +34,7 @@ public class RunnerTags {
     }
     @RunWith(CucumberWithSerenity.class)
     @CucumberOptions(features = "src/test/resources/features/prueba.feature",
-            tags = { "@HistoriaDeUsuario"},
+            tags =  "@HistoriaDeUsuario",
             glue = "co.com.choucair.certification.prueba.screenplay.stepdefinitions")
     public class Runner{
     }
