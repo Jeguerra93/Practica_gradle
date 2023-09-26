@@ -13,10 +13,7 @@ public class RunnerTags {
     @Before
     public void test() {
         switch (SystemEnvironmentVariables.createEnvironmentVariables().getProperty("webdriver.driver")) {
-            case "chrome":
-                WebDriverManager.chromedriver().setup();
-               // GUIA PARA ELABORAR UNA AUTOMATIZACION WEB
-                break;
+            // GUIA PARA ELABORAR UNA AUTOMATIZACION WEB
             case "ie":case "iexplorer":
                 WebDriverManager.iedriver().setup();
                 break;
