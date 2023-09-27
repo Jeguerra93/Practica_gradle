@@ -13,16 +13,20 @@ public class Mydefinition {
     OpenApp OpenApp;
     TasksAction TaskAction;
 
-    @Given("^I enter with my credentials$")
-    public void iEnterWithMyCredentials() {
-    OpenApp.appUrl();
-    }
-    @When("^I proceed with authentication$")
-    public void iProceedMyAuthentication() {
-      TaskAction.singIn();
-    }
-    @Then("^go to the main view$")
-    public void goToMain() {
 
+    @Given ("I enter with my credentials")
+    public void i_enter_with_my_credentials() {
+        OpenApp.appUrl();
+        throw new io.cucumber.java.PendingException();
+    }
+    @When ("I proceed with authentication")
+    public void i_proceed_with_authentication() {
+        TaskAction.singIn();
+        throw new io.cucumber.java.PendingException();
+    }
+
+    @Then ("go to the view")
+    public void go_To_The_View() {
+        throw new io.cucumber.java.PendingException();
     }
 }
